@@ -32,3 +32,11 @@ body {
 .center {
     text-align: center;
 }
+
+.post{
+    border-top: 1px solid black;
+}
+
+.fatal{
+    color: red;
+}

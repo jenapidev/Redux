@@ -15,7 +15,7 @@ export const getUsers = () => async (dispatch) => {
         console.log('the error was: ' + error.message);
         dispatch({
             type: ERROR,
-            payload: error.message
-        });
+            payload: "User's information is not available: " + error.message
+        });  
     }
 }
