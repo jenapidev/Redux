@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { GET_POSTS, GET_POSTS_BY_USER, LOADING, ERROR, COM_ERROR, COM_LOADING, GET_COMMENTS_BY_POSTS } from "../types/postsTypes";
-import * as usersTypes from "../types/usersTypes";
+import * as usersTypes from "../types/usersTypes"; 
 
 const { GET_ALL: GET_USERS } = usersTypes;
 

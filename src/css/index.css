@@ -35,8 +35,13 @@ body {
 
 .post{
     border-top: 1px solid black;
+    cursor: pointer;
 }
 
 .fatal{
     color: red;
+}
+
+li {
+    margin: 15px 0px 15px 0px;
 }

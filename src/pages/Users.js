@@ -19,8 +19,6 @@ class Users extends Component {
     //this.props.getAll();
   }
 
-
-
   ponerContenido = () => {
     if (this.props.loading){
       return  <Spiner/>;   
