@@ -17,7 +17,6 @@ class Assignments extends React.Component {
 
     insertContent = () => {
         const { assignments, loading, error } = this.props
-        console.log(assignments)
         if(loading) {
             return <Spinner/>
         }
@@ -25,25 +24,26 @@ class Assignments extends React.Component {
             return <Fatal message={error}/>
         }
 
-        return Object.keys(assignments).map((usu_id) => (
-            <div key={usu_id}>
-                <h2>User: {usu_id}</h2>
+        return Object.keys(assignments).map((user_id) => (
+            <div key={user_id}>
+                <h2>User: {user_id}</h2>
                 <div>
-                    { this.insertAssignments(usu_id)}
+                    { this.insertAssignments(user_id)}
                 </div>
             </div>
         ))
     }
 
-    insertAssignments = (usu_id) => {
+    insertAssignments = (user_id) => {
         const { assignments } = this.props
         const by_user = {
-            ...assignments[usu_id]
+            ...assignments[user_id]
         }
 
-        return Object.keys(by_user).map((assign_id) => (
-            <div>
-                <input type="checkbox" defaultChecked={by_user[assign_id].completed}/>
+        return Object.keys(by_user).map((assign_id, key) => (
+            <div key={key}>
+                {console.log(key)}
+                <input type="checkbox" defaultChecked={by_user[assign_id].completed} key={assign_id}/>
                 {
                     by_user[assign_id].title
                 }
