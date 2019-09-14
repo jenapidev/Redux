@@ -3,10 +3,10 @@ import { combineReducers } from 'redux';
 // Reducers
 import usersReducer from "./usersReducer";
 import postsReducer from "./postsReducer"; 
-import assignmentsReducer from "./assignmentsReducer";
+import tasksReducer from "./tasksReducer";
 
 export default combineReducers({
     usersReducer,
     postsReducer,
-    assignmentsReducer 
+    tasksReducer 
 });
